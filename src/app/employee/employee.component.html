@@ -1,0 +1,82 @@
+<div id="wrapper">
+    <app-header></app-header>
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <app-topbar></app-topbar>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Employees</h1>
+                </div>
+
+                <form  class="row" [formGroup]="employee" (ngSubmit)="submit(employee.value)">
+                    <input type="hidden" name="id" formControlName="id" />
+                    <div class="col-lg-12">
+                       <span class="text-dark font-weight-bold">Emp Id :</span>
+                        <input type="text" class="form-control" name="empid" formControlName="empid" />
+                    </div>
+                    <div class="col-lg-12">
+                       <span class="text-dark font-weight-bold">Name :</span>
+                        <textarea class="form-control" name="name" formControlName="name" placeholder="Enter Your Name"></textarea>
+                    </div><br><br>
+                    <div class="col-lg-12">
+                        <span class="text-dark font-weight-bold">Gender :</span> 
+                        <input type="radio" name="gender" formControlName="gender" value="Male">Male:
+                        <input type="radio" name="gender" formControlName="gender" value="Female">Female:
+
+                    </div><br><br>
+                    <div class="col-lg-12">
+                       <span class="text-dark font-weight-bold">Birth Date:</span> 
+                        <input  type="date" name="birthdate" formControlName="birthdate">
+                    </div>
+                    <div class="col-lg-12">
+                        <span class="text-dark font-weight-bold">Address :</span> 
+                        <textarea class="form-control" name="address" formControlName="address" placeholder="Enter Your Address" ></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                      <span class="text-dark font-weight-bold">Email :</span>  
+                        <textarea class="form-control" name="email" formControlName="email" placeholder="abcd@gmail.com"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                       <span class="text-dark font-weight-bold">Mobile No :</span> 
+                        <input class="form-control" type="number" name="mobileno" formControlName="mobileno" placeholder="1234567890">
+                    </div><br><br><br>
+
+                    <div class="col-lg-12">
+                        <span class="text-dark font-weight-bold">Joining Date :</span> 
+                        <input type="date"  name="joiningdate" formControlName="joiningdate">
+                    </div>
+                    <div class="col-lg-12">
+                       <span class="text-dark font-weight-bold">Department Name :</span> 
+                        <textarea class="form-control" name="departmentname" formControlName="departmentname" placeholder="Enter Your Department Name"></textarea>
+                    </div><br><br><br><br>
+
+                    <div class="col-lg-12">
+                       <span class="text-dark font-weight-bold">Releiving Date :</span> 
+                        <input type="date" name="releivingdate" formControlName="releivingdate">
+                    </div>
+                    <div class="col-lg-12">
+                      <span class="text-dark font-weight-bold">Photocode :</span>  
+                        <textarea class="form-control" name="photocode" formControlName="photocode"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <br />
+                        <input type="submit" value="Save" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- End of Footer -->
+        <app-footer></app-footer>
+
+    </div>
+    <!-- End of Content Wrapper -->
